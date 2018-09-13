@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable name="product" type="com.my.myproduct.Product" />
+
+    </data>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -55,7 +60,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/title"
             android:textColor="@color/Black"
-            android:text=""
+            android:text="@{product.title}"
             android:textSize="14sp"
             android:layout_marginTop="5dp"/>
 
@@ -160,3 +165,5 @@
 
     </LinearLayout>
 </RelativeLayout>
+
+</layout>
