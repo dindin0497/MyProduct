@@ -6,7 +6,7 @@ import android.os.Bundle
 import com.my.myproduct.databinding.ActivityMainBinding
 import com.my.myproduct.util.Products
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), IMainActivity {
 
     lateinit  var mBinding : ActivityMainBinding
 
@@ -18,5 +18,18 @@ class MainActivity : AppCompatActivity() {
 
         var products = Products()
         mBinding.product = products.PRODUCTS[0]
+
+        mBinding.productNum = 125
+
+        mBinding.iMainActivity = this
+    }
+
+    override fun inflateQuantityDialog() {
+        var dialog = ChooseQuantityDialog()
+        dialog.show(supportFragmentManager,getString(R.string.dialog_choose_quantity))
+    }
+
+    override fun setQuantity(n: Int) {
+        mBinding.productNum = n
     }
 }
