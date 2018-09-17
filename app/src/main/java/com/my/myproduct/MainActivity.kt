@@ -22,6 +22,8 @@ class MainActivity : AppCompatActivity(), IMainActivity {
         mBinding.productNum = 125
 
         mBinding.iMainActivity = this
+
+        mBinding.testUrl = "https://www.google.com.hk/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png"
     }
 
     override fun inflateQuantityDialog() {

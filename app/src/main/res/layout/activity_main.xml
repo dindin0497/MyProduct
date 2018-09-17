@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <import type="com.my.myproduct.util.StringUtil" />
         <import type="com.my.myproduct.util.BigDecimalUtil" />
         <import type="android.view.View" />
         <variable name="product" type="com.my.myproduct.Product" />
         <variable name="product_num" type="int" />
+        <variable name="testUrl" type="String" />
         <variable name="iMainActivity" type="com.my.myproduct.IMainActivity" />
 
     </data>
@@ -81,8 +82,8 @@
                 android:scaleType="fitCenter"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
-                android:src="@{product.image}"
-                android:id="@+id/image"/>
+                android:id="@+id/image"
+                app:imageUrl="@{testUrl}"/>
 
         </RelativeLayout>
 
